@@ -37,7 +37,9 @@ fn power_set(input:Vec<i32>)-> Vec<Vec<i32>>{
     }
     return output;
 }
-
+/*
+    insures binary leading zeros don't get cut off screwing up the calculations. 
+*/
 fn pad_zeros( input:String,pad_size:i32)->String{
     if input.len() < (pad_size +1) as usize {
         let mut nstring = String::from("0");
