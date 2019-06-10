@@ -13,7 +13,7 @@ fn main() {
 }
 
 /*
-Convert to binary,iterate to 2^n if 1 add if 0 don't add is added example
+Convert to binary,iterate to 2^n if 1 add if 0 don't add 
 */
 
 fn power_set(input:Vec<i32>)-> Vec<Vec<i32>>{
@@ -22,8 +22,8 @@ fn power_set(input:Vec<i32>)-> Vec<Vec<i32>>{
     let mut output: Vec<Vec<i32>> = Vec::new();
 
     for x in 0..length  {
-        let mut bin:String = format!("{:b}",x);
-        let mut bin = pad_zeros(bin,(input.len() -1) as i32);
+        let  bin:String = format!("{:b}",x);
+        let  bin = pad_zeros(bin,(input.len() -1) as i32);
         let mut inp:Vec<i32> = Vec::new();
         for (i,c) in bin.chars().enumerate(){
             
@@ -38,7 +38,7 @@ fn power_set(input:Vec<i32>)-> Vec<Vec<i32>>{
     return output;
 }
 
-fn pad_zeros(mut input:String,pad_size:i32)->String{
+fn pad_zeros( input:String,pad_size:i32)->String{
     if input.len() < (pad_size +1) as usize {
         let mut nstring = String::from("0");
         nstring.push_str(&input.clone());
