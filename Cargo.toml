@@ -1,0 +1,7 @@
+[package]
+name = "dcp37"
+version = "0.1.0"
+authors = ["caleb <caleb.a.mccarthy@gmail.com>"]
+edition = "2018"
+
+[dependencies]
